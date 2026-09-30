@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo AGC Chatbot Widget</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Demo independiente</p>
+      <h1 id="page-title">Probá el widget de chatbot</h1>
+      <p class="lede">Esta página no pertenece a la Ticketera. Solo carga su widget embebible para comprobar la integración desde un sitio externo.</p>
+    </section>
+
+    <section class="setup" aria-labelledby="setup-title">
+      <div class="section-heading">
+        <p class="eyebrow">Configuración</p>
+        <h2 id="setup-title">Conectá esta demo con la Ticketera</h2>
+      </div>
+      <form id="config-form" class="config-form">
+        <label>
+          URL base de la Ticketera
+          <input id="api-base-url" name="apiBaseUrl" type="url" value="http://localhost" placeholder="https://ticketera.example.gov.ar" required>
+        </label>
+        <label>
+          Clave pública del widget
+          <input id="public-key" name="publicKey" type="text" placeholder="CLAVE_PUBLICA_DE_INTEGRACION" autocomplete="off">
+        </label>
+        <div class="actions">
+          <button type="submit">Cargar widget</button>
+          <button id="clear-button" class="secondary" type="button">Limpiar</button>
+        </div>
+      </form>
+      <p id="status" class="status" role="status">Ingresá la URL de la Ticketera y cargá el widget.</p>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <div>
+        <p class="eyebrow">Qué hace esta página</p>
+        <h2 id="notes-title">Una prueba mínima, sin backend propio</h2>
+      </div>
+      <ul>
+        <li>Sirve una página externa como lo haría un sitio autorizado.</li>
+        <li>Carga <code>/js/agc-chatbot-widget.js</code> desde la Ticketera.</li>
+        <li>La API key real nunca se guarda en este proyecto.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

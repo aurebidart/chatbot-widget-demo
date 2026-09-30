@@ -1,0 +1,9 @@
+{
+  "name": "chatbot-widget-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Demo independiente del widget de chatbot de la Ticketera",
+  "scripts": {
+    "start": "python3 -m http.server 5151"
+  }
+}
